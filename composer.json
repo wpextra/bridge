@@ -32,15 +32,10 @@
 			"email": "developer@wpextra.co"
 		}
 	],
-	"autoload":          {
-        "psr-4":    {
-            "Bridge\\": "src/"
-        }
-    },
-    "autoload-dev":      {
-        "psr-4": {
-            "Bridge\\Tests\\": "tests/src/"
-        }
-    },
+	"autoload": {
+		"files": [
+			"src/Kernel.php"
+		]
+	},
 	"minimum-stability": "dev"
 }
