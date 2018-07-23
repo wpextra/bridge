@@ -21,7 +21,7 @@ class Element {
 		$this->categories[$name] = $class;
 	}
 
-	public function add_header($name, $class) {
+	public function add_header($class) {
 		$reader = new Reader();
 		$annotation = $reader->element(get_class($class));
 		if($annotation) {
@@ -30,11 +30,11 @@ class Element {
 			$data['type'] = $annotation->type;
 			$data['class'] = get_class($class);
 			$data['meta'] = $annotation->meta;
-			$this->headers[$name] = $data;
+			$this->headers[] = $data;
 		}
 	}
 
-	public function add_footer($name, $class) {
+	public function add_footer($class) {
 		$reader = new Reader();
 		$annotation = $reader->element(get_class($class));
 		if($annotation) {
@@ -43,11 +43,11 @@ class Element {
 			$data['type'] = $annotation->type;
 			$data['class'] = get_class($class);
 			$data['meta'] = $annotation->meta;
-			$this->footers[$name] = $data;
+			$this->footers[] = $data;
 		}
 	}
 
-	public function add_popup($name, $class) {
+	public function add_popup($class) {
 		$reader = new Reader();
 		$annotation = $reader->element(get_class($class));
 		if($annotation) {
@@ -56,11 +56,11 @@ class Element {
 			$data['type'] = $annotation->type;
 			$data['class'] = get_class($class);
 			$data['meta'] = $annotation->meta;
-			$this->popups[$name] = $data;
+			$this->popups[] = $data;
 		}
 	}
 
-	public function add_block($name, $class) {
+	public function add_block($class) {
 		$reader = new Reader();
 		$annotation = $reader->element(get_class($class));
 		if($annotation) {
@@ -69,13 +69,13 @@ class Element {
 			$data['type'] = $annotation->type;
 			$data['class'] = get_class($class);
 			$data['meta'] = $annotation->meta;
-			$this->blocks[$name] = $data;
+			$this->blocks[] = $data;
 		}
 	}
 
-	public function add_widget($name, $widget) {
-		$this->widgets[$name] = array_merge([
-			'id'            => $name,   
+	public function add_widget($widget) {
+		$this->widgets[] = array_merge([
+			'id'            =>   
 			'description'   => '',
 			'class'         => '',
 			'before_widget' => '<li id="%1$s" class="widget %2$s">',
@@ -85,8 +85,8 @@ class Element {
 		], $widget);
 	}
 
-	public function add_menu($name, $data) {
-		$this->menus[$name] = array_merge([
+	public function add_menu($data) {
+		$this->menus[] = array_merge([
 			'id'	=> $name,
 			'items' => []
 		], $data);

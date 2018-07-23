@@ -24,6 +24,11 @@ class Element {
     public $type;
 
     /**
+     * @var string
+     */
+    public $template;
+
+    /**
      * @var array
      */
     public $meta;
@@ -31,5 +36,11 @@ class Element {
     /**
      * @var array
      */
+    public $templates;
+
+    /**
+     * @var array
+     */
     public $apis;
+
 }

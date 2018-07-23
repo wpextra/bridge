@@ -14,8 +14,7 @@ class Metadata {
 	public $route_apis = [];
 	public $middlewares = [];
 
-
-	public function add_schema($name, $object) {
+	public function add_model($object) {
 		$reader = new Reader();
 		$annotation = $reader->getClass(get_class($object));
 		if($annotation) {
@@ -36,7 +35,31 @@ class Metadata {
 			$schema['class'] = get_class($object);
 			$schema['properties'] = $properties;
 			$schema['meta'] = $annotation->meta;
-			$this->schemas[$name] = $schema;
+			$this->schemas[] = $schema;
+		}
+	}
+	public function add_schema($object) {
+		$reader = new Reader();
+		$annotation = $reader->getClass(get_class($object));
+		if($annotation) {
+			$raw_properties = $reader->properties(get_class($object));
+			$properties = [];
+			foreach ($raw_properties as $property => $propertyInfo) {
+				$properties[$property] = array_merge($propertyInfo, [
+
+				]);
+			}
+
+			$schema = [];
+			$schema['id'] = $annotation->name;
+			$schema['virtual'] = $annotation->virtual;
+			$schema['virtual_type'] = $annotation->virtualType;
+			$schema['repository'] = $annotation->repository;
+			$schema['persistent'] = $annotation->persistent;
+			$schema['class'] = get_class($object);
+			$schema['properties'] = $properties;
+			$schema['meta'] = $annotation->meta;
+			$this->schemas[] = $schema;
 		}
 	}
 	public function add_route($object) {

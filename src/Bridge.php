@@ -87,17 +87,17 @@ final class Bridge {
 		$element = \Bridge\Storage\Element::instance();
 
 		$metadata = \Bridge\Storage\Metadata::instance();
-		$metadata->add_schema('comment_meta', new \Bridge\Model\CommentMeta());
-		$metadata->add_schema('comment', new \Bridge\Model\Comment());
-		$metadata->add_schema('link', new \Bridge\Model\Link());
-		$metadata->add_schema('option', new \Bridge\Model\Option());
-		$metadata->add_schema('post_meta', new \Bridge\Model\PostMeta());
-		$metadata->add_schema('post', new \Bridge\Model\Post());
-		$metadata->add_schema('term_meta', new \Bridge\Model\TermMeta());
-		$metadata->add_schema('term', new \Bridge\Model\Term());
-		$metadata->add_schema('term_taxonomy', new \Bridge\Model\TermTaxonomy());
-		$metadata->add_schema('user_meta', new \Bridge\Model\UserMeta());
-		$metadata->add_schema('user_meta', new \Bridge\Model\User());
+		$metadata->add_model(new \Bridge\Model\CommentMeta());
+		$metadata->add_model(new \Bridge\Model\Comment());
+		$metadata->add_model(new \Bridge\Model\Link());
+		$metadata->add_model(new \Bridge\Model\Option());
+		$metadata->add_model(new \Bridge\Model\PostMeta());
+		$metadata->add_model(new \Bridge\Model\Post());
+		$metadata->add_model(new \Bridge\Model\TermMeta());
+		$metadata->add_model(new \Bridge\Model\Term());
+		$metadata->add_model(new \Bridge\Model\TermTaxonomy());
+		$metadata->add_model(new \Bridge\Model\UserMeta());
+		$metadata->add_model(new \Bridge\Model\User());
 
 		$twig = \Bridge\Template\Twig_Extension::instance();
 		$twig->add_global('form', new \Bridge\Form());
