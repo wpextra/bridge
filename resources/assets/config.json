@@ -10,12 +10,21 @@
 		]
 	},
 	"fonts": [
+		"../../node_modules/font-awesome/fonts/**",
+		"../../node_modules/mdi/fonts/**/*",
 		"fonts/**/*"
 	],
 	"css": [
 		
 	],
 	"js": [
-		
+		"../../node_modules/jquery/dist/jquery.min.js",
+		"../../node_modules/popper.js/dist/umd/popper.min.js",
+		"../../node_modules/bootstrap/dist/js/bootstrap.min.js",
+		"../../node_modules/scrollreveal/dist/scrollreveal.min.js",
+		"../../node_modules/swiper/dist/js/swiper.min.js",
+		"../../node_modules/owl-carousel/owl-carousel/owl.carousel.min.js",
+		"../../node_modules/masonry-layout/dist/masonry.pkgd.min.js",
+		"../../node_modules/chart.js/dist/Chart.min.js"
 	]
 }

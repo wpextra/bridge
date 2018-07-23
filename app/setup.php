@@ -10,10 +10,10 @@ add_action('bridge_started', function() {
 	\Bridge\Config::dir('api', BRIDGE_PATH.'app/apis');
 	\Bridge\Config::dir('controller', BRIDGE_PATH.'app/controllers');
 	\Bridge\Config::dir('model', BRIDGE_PATH.'app/models');
-	\Bridge\Config::dir('header', BRIDGE_PATH.'app/elements/Header');
-	\Bridge\Config::dir('footer', BRIDGE_PATH.'app/elements/Footer');
-	\Bridge\Config::dir('block', BRIDGE_PATH.'app/elements/Header');
-	\Bridge\Config::dir('popup', BRIDGE_PATH.'app/elements/Popup');
+	\Bridge\Config::dir('header', BRIDGE_PATH.'app/elements/header');
+	\Bridge\Config::dir('footer', BRIDGE_PATH.'app/elements/footer');
+	\Bridge\Config::dir('block', BRIDGE_PATH.'app/elements/block');
+	\Bridge\Config::dir('popup', BRIDGE_PATH.'app/elements/popup');
 	\Bridge\Config::dir('middleware', BRIDGE_PATH.'app/middlewares');
 	\Bridge\Config::dir('repository', BRIDGE_PATH.'app/repository');
 	\Bridge\Config::dir('persistent', BRIDGE_PATH.'app/persistent');
