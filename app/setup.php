@@ -2,6 +2,8 @@
 
 
 add_action('bridge_started', function() {
+
+	
 	$config = \Bridge\Config::instance();
 	$config->add_collection('api', BRIDGE_PATH.'app/apis');
 	$config->add_collection('controller', BRIDGE_PATH.'app/controllers');
