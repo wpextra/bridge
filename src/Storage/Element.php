@@ -73,9 +73,9 @@ class Element {
 		}
 	}
 
-	public function add_widget($widget) {
-		$this->widgets[] = array_merge([
-			'id'            =>   
+	public function add_widget($name, $widget) {
+		$this->widgets[$name] = array_merge([
+			'id'            => $name,   
 			'description'   => '',
 			'class'         => '',
 			'before_widget' => '<li id="%1$s" class="widget %2$s">',
@@ -85,7 +85,7 @@ class Element {
 		], $widget);
 	}
 
-	public function add_menu($data) {
+	public function add_menu($name, $data) {
 		$this->menus[] = array_merge([
 			'id'	=> $name,
 			'items' => []
