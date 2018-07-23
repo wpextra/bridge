@@ -29,8 +29,6 @@ final class Bridge {
 		//run app
 		$container = \Bridge\Container::instance();
 
-
-
 		$metadata = \Bridge\Metadata::instance();
 		$metadata->add('schema', new \Bridge\Repository\SchemaRepository());
 		$metadata->add('route', new \Bridge\Repository\RouteRepository());
