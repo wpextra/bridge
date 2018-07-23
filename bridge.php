@@ -13,12 +13,14 @@
 
 
 if ( defined( 'ABSPATH' ) && ! defined( 'BRIDGE_VERSION' ) ) {
-	require_once dirname( __FILE__ ) . '/app/setup.php';
-	require_once dirname( __FILE__ ) . '/config/config.php';
 	require_once dirname( __FILE__ ) . '/startup.php';
+	require_once dirname( __FILE__ ) . '/config/config.php';
+	require_once dirname( __FILE__ ) . '/app/setup.php';
+	require_once dirname( __FILE__ ) . '/modules/setup.php';
+	require_once dirname( __FILE__ ) . '/resources/setup.php';
+	
 	$app = new \Bridge\Startup();
 	$app->start();
-
 
 }
 

@@ -1,0 +1,69 @@
+@import "fonts/fonts";
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../../node_modules/@mdi/font/scss/materialdesignicons.scss";
+img {
+	max-width: 100%;
+}
+
+.ux-wrapper {
+
+	@import "../../../node_modules/bootstrap/scss/functions";
+	@import "../../../node_modules/bootstrap/scss/variables";
+	@import "variables";
+
+	@import "../../../node_modules/compass-mixins/lib/compass";
+	@import "../../../node_modules/compass-mixins/lib/animate";
+	@import "../../../node_modules/bootstrap/scss/bootstrap";
+	
+
+
+	/* === Template mixins === */
+	@import "mixins/animation";
+	@import "mixins/background";
+	@import "mixins/blockqoute";
+	@import "mixins/badges";
+	@import "mixins/buttons";
+	@import "mixins/cards";
+	@import "mixins/misc";
+	@import "mixins/text";
+	/*-------------------------------------------------------------------*/
+
+	/* === Core Styles === */
+
+	@import "reset";
+	@import "fonts";
+	@import "functions";
+	@import "sidebar";
+	@import "navbar";
+	@import "typography";
+	@import "misc";
+	@import "footer";
+	@import "utilities";
+	@import "demo";
+	@import "dashboard";
+	/*-------------------------------------------------------------------*/
+
+	/* === Components === */
+
+	@import "components/badges";
+	@import "components/bootstrap-progress";
+	@import "components/buttons";
+	@import "components/cards";
+	@import "components/checkbox-radio";
+	@import "components/dropdown";
+	@import "components/forms";
+	@import "components/icons";
+	@import "components/lists";
+	@import "components/nav";
+	@import "components/new-account";
+	@import "components/preview";
+	@import "components/tables";
+	/*-------------------------------------------------------------------*/
+
+	/* === Landing screens === */
+
+	@import "landing-screens/auth";
+	@import "landing-screens/error";
+} 
+
+

@@ -23,7 +23,7 @@ final class Startup {
 		define('BRIDGE_VERSION', '1.0.1' );
 		define('BRIDGE_PATH', plugin_dir_path( __FILE__ ) );
 		define('BRIDGE_URL', plugin_dir_url( __FILE__ ) );
-		define('BRIDGE_ASSET_URL', plugin_dir_url( __FILE__ ).'styles/dist/' );
+		define('BRIDGE_ASSET_URL', plugin_dir_url( __FILE__ ).'assets/' );
 		$hostname = $_SERVER['SERVER_NAME']; 
 		switch ($hostname) {
 			case 'stencil.com':
@@ -55,8 +55,10 @@ final class Startup {
 		$framework = \Bridge\Framework::instance();
 		$framework->start();
 		do_action('bridge_started');
+		do_action('bridge_theme');
 		$framework->build();
 		\Bridge\Kernel\Framework::instance();
+		do_action('bridge_extension');
 	}
 
 	public function after_build() {
