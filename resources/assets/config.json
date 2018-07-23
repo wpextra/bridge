@@ -1,0 +1,21 @@
+{
+	"source": "./",
+	"target": "../dist/",
+	"app"	: {
+		"css": [
+			"scss/**.scss"
+		],
+		"js": [
+			"js/**.js"
+		]
+	},
+	"fonts": [
+		"fonts/**/*"
+	],
+	"css": [
+		
+	],
+	"js": [
+		
+	]
+}

@@ -34,7 +34,7 @@
 	],
 	"autoload": {
 		"files": [
-			"src/Kernel.php"
+			"src/psrfile.php"
 		]
 	},
 	"minimum-stability": "dev"
