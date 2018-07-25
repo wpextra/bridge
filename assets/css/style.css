@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @font-face {
   font-family: "dripicons-v2";
   src: url("../fonts/dripicons-v2.eot");
@@ -10991,7 +10989,6 @@ img {
   /*-------------------------------------------------------------------*/
   /* === Core Styles === */
   /* Reset Styles */
-  /* Fonts */
   /* Sidebar */
   /* style for off-canvas menu*/
   /* Navbar */
@@ -21100,9 +21097,8 @@ img {
     .ux-wrapper .navbar-collapse {
       display: flex;
       margin-top: 0.5rem; } }
-  .ux-wrapper :root,
   .ux-wrapper body {
-    font-size: 1rem;
+    font-size: 13px;
     font-family: "Poppins", sans-serif; }
   .ux-wrapper .h1,
   .ux-wrapper .h2,
@@ -21118,28 +21114,6 @@ img {
   .ux-wrapper h6 {
     font-family: "Poppins", sans-serif;
     font-weight: 500; }
-  .ux-wrapper p {
-    font-size: 13px; }
-  .ux-wrapper .h1,
-  .ux-wrapper h1 {
-    font-size: 2.19rem; }
-  .ux-wrapper .h2,
-  .ux-wrapper h2 {
-    font-size: 1.88rem; }
-  .ux-wrapper .h3,
-  .ux-wrapper h3 {
-    font-size: 1.56rem; }
-  .ux-wrapper .h4,
-  .ux-wrapper h4 {
-    font-size: 1.13rem; }
-  .ux-wrapper .h5,
-  .ux-wrapper h5 {
-    font-size: 1rem; }
-  .ux-wrapper .h6,
-  .ux-wrapper h6 {
-    font-size: 0.9375rem; }
-  .ux-wrapper p {
-    font-size: 13px; }
   .ux-wrapper .display-1 {
     font-size: 3.75rem; }
     @media (max-width: 991px) {
@@ -22355,7 +22329,6 @@ img {
           left: auto;
           right: 0; }
   .ux-wrapper .form-check .form-check-label {
-    font-size: 13px;
     line-height: 1.5;
     padding-left: 10px; }
     .ux-wrapper .form-check .form-check-label input:checked + .input-helper:before {
@@ -22542,10 +22515,8 @@ img {
     .rtl .ux-wrapper .form-radio.form-radio-flat label input:checked + .input-helper:after {
       left: auto;
       right: -2px; }
-  .ux-wrapper .dropdown-menu {
-    font-size: 13px; }
-    .ux-wrapper .dropdown-menu .dropdown-item:active {
-      background: initial; }
+  .ux-wrapper .dropdown-menu .dropdown-item:active {
+    background: initial; }
   .ux-wrapper .input-group-append,
   .ux-wrapper .input-group-prepend {
     background: #ffffff;
@@ -22600,8 +22571,7 @@ img {
       -webkit-align-items: center;
       align-items: center;
       padding: 15px;
-      font-family: "Poppins", sans-serif;
-      font-size: 13px; }
+      font-family: "Poppins", sans-serif; }
       .ux-wrapper .icons-list > div i {
         display: inline-block;
         font-size: 20px;
@@ -22611,8 +22581,7 @@ img {
   .ux-wrapper dl,
   .ux-wrapper ol,
   .ux-wrapper ul {
-    padding-left: 1rem;
-    font-size: 13px; }
+    padding-left: 1rem; }
     .ux-wrapper dl li,
     .ux-wrapper ol li,
     .ux-wrapper ul li {
@@ -22936,7 +22905,6 @@ img {
     .ux-wrapper .table td,
     .ux-wrapper .table th {
       vertical-align: middle;
-      font-size: 13px;
       line-height: 1;
       white-space: nowrap; }
       .ux-wrapper .table td img,

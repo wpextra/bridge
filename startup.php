@@ -38,6 +38,7 @@ final class Startup {
 	}
 	public function files() {
 		require_once plugin_dir_path( __FILE__ )  . 'vendor/autoload.php';
+		require_once plugin_dir_path( __FILE__ )  . 'framework/bridge.php';
 		require_once plugin_dir_path( __FILE__ )  . 'framework/autoloader.php';
 		require_once plugin_dir_path( __FILE__ )  . 'framework/core/src/startup.php';
 		require_once plugin_dir_path( __FILE__ )  . 'framework/client/src/startup.php';
@@ -52,7 +53,7 @@ final class Startup {
 
 	public function build() {
 		\Bridge\Autoloader::instance();
-		$framework = \Bridge\Framework::instance();
+		$framework = new \Bridge\Framework();
 		$framework->start();
 		do_action('bridge_started');
 		do_action('bridge_theme');

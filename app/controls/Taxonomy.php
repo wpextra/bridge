@@ -3,7 +3,7 @@ namespace Bridge\App\Control;
 if (!defined('ABSPATH'))
 	exit;
 
-use Bridge\Control\Control;
+use Bridge\Template\Control\Control;
 class Taxonomy extends Control {
 
 

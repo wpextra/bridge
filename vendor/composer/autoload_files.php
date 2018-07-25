@@ -14,5 +14,6 @@ return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     'decc78cc4436b1292c6c0d151b19445c' => $vendorDir . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
+    '8ca8a91f0a826d6c6c8f274c90ca7d88' => $vendorDir . '/wpmetabox/meta-box/meta-box.php',
     'e269daa29a0bff01360b96d38067591b' => $baseDir . '/bridge.php',
 );

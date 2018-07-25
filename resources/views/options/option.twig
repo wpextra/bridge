@@ -1,0 +1,45 @@
+{% extends 'layouts/admin.twig' %}
+{% block header %}
+	<header class="ux-header">
+		<div class="container-fluid">
+			<nav class="navbar navbar-default navbar-expand-lg ">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span>
+				</button>
+				<div class="collapse navbar-collapse ml-auto" id="navbarCollapse">
+					<div class="ml-auto">
+						{{element('menu_bridge', {'menu_id' : 'bridge_option'})}}
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+{% endblock %}
+{% block content %}
+	<div class="section">
+		<div class="row purchace-popup">
+			<div class="col-12">
+				<span class="d-flex alifn-items-center">
+					<p>Like what you see? Check out our premium version for more.</p>
+					<a href="https://www.wpextra.co/upgrade-pro/" target="_blank" class="btn purchase-button ml-auto" style="float:right">Upgrade To Pro</a>
+				</span>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">{{title}}</h4>
+				<p class="card-description">
+					{{description}}
+				</p>
+				<form class="form-option" method="post">
+					<input type="hidden" name="nonce" value="{{nonce}}" />
+					<div class="field-contaner">
+						{{form.options(options)}}
+					</div>
+					<button type="submit" name="submit" class="btn btn-success mr-2">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

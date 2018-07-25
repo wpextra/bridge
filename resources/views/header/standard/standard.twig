@@ -1,0 +1,17 @@
+<header class="ux-header">
+	<div class="container-fluid">
+		<nav class="navbar navbar-default navbar-expand-lg ">
+			<a class="logo navbar-brand" href="{{site.site_url}}" title="{{site.name}}" rel="home">
+				<img src="{{header_logo}}" alt="{{site.name}}" style="max-width: 200px">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+			<div class="collapse navbar-collapse ml-auto" id="navbarCollapse">
+				<div class="ml-auto">
+					{{element('menu', {menu_id: 10})}}
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>

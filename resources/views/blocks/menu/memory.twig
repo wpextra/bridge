@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg">
+		<ul class="navbar-nav mr-auto">
+			{% for item in menu %} 
+				{% if item.childrens|length > 1 %}
+					<li class="nav-item dropdown  {{item.class}}">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							{{item.title}}
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							{% for child in item.childrens %} 
+							<a class="dropdown-item" href="admin.php?page={{child.route}}">{{child.title}}</a>
+							{% endfor %}
+						</div>
+					</li>
+				{% else %}
+					<li class="nav-item active  {{item.class}}">
+						<a class="nav-link" href="admin.php?page={{item.route}}">{{item.title}}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+</nav>

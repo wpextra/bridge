@@ -17,7 +17,8 @@
 		"doctrine/annotations": "1.7.x-dev",
 		"symfony/property-info": "^4.2@dev",
 		"google/apiclient": "^2.0",
-		"guzzlehttp/guzzle": "^6.3@dev"
+		"guzzlehttp/guzzle": "^6.3@dev",
+		"wpmetabox/meta-box": "dev-master"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "5.7.16"

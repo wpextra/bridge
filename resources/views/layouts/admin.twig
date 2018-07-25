@@ -3,7 +3,21 @@
 		<section class="ux-section">
 			<div class="container">
 				{% block header %}
-					
+					<header class="ux-header">
+						<div class="container-fluid">
+							<nav class="navbar navbar-default navbar-expand-lg ">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="fa fa-bars"></span>
+								</button>
+								<div class="collapse navbar-collapse ml-auto" id="navbarCollapse">
+									<div class="ml-auto">
+										{{element('menu_bridge', {'menu_id' : 'bridge_admin'})}}
+									</div>
+								</div>
+							</nav>
+						</div>
+					</header>
+
 				{% endblock %}
 				
 				<div class="main-content">

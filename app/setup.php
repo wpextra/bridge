@@ -18,14 +18,21 @@ add_action('bridge_started', function() {
 	\Bridge\Config::dir('repository', BRIDGE_PATH.'app/repository');
 	\Bridge\Config::dir('persistent', BRIDGE_PATH.'app/persistent');
 	\Bridge\Config::dir('control', BRIDGE_PATH.'app/controls');
+	\Bridge\Config::dir('container', BRIDGE_PATH.'app/repository');
+	\Bridge\Config::dir('container', BRIDGE_PATH.'app/persistent');
+	\Bridge\Config::dir('container', BRIDGE_PATH.'app/services');
 
-	\Bridge\Menu::add('bridge_admin', [
-		'segment' => 'admin',
+	\Bridge\Menu::wp('main_menu', [
+		'title' => 'Main Menu'
+	]);
+	
+	
+	\Bridge\Menu::admin('bridge_admin', [
+		'id' => 'bridge_admin',
 		'title' => 'Bridge',
 		'description' => '',
 		'icon' => ''
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'id'	=> 'home',
 		'title' => 'Home',
@@ -33,7 +40,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_admin'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'id'	=> 'analytic',
 		'title' => 'Analytics',
@@ -41,7 +47,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_installed'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'id'	=> 'service',
 		'title' => 'Service',
@@ -49,7 +54,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_installed'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'id'	=> 'howto',
 		'title' => 'How to',
@@ -57,7 +61,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_installed'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'id'	=> 'my_app',
 		'title' => 'My Apps',
@@ -65,7 +68,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_installed'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'id'	=> 'app',
 		'title' => 'Apps',
@@ -73,7 +75,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'parent' => 'app',
 		'id'	=> 'plugin',
@@ -82,7 +83,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_plugin'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'parent' => 'app',
 		'id'	=> 'theme',
@@ -91,7 +91,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_theme'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'parent' => 'app',
 		'id'	=> 'widget',
@@ -100,7 +99,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_widget'
 	]);
-
 	\Bridge\Menu::item('bridge_admin', [
 		'parent' => 'app',
 		'id'	=> 'integration',
@@ -109,7 +107,6 @@ add_action('bridge_started', function() {
 		'icon' => '',
 		'route' => 'bridge_app_integrations'
 	]);
-
 	if(!defined('BRIDGE_KOMODO_INSTALLED')) {
 		\Bridge\Menu::item('bridge_admin', [
 			'id'	=> 'pro',
@@ -119,12 +116,31 @@ add_action('bridge_started', function() {
 			'route' => 'pro_version'
 		]);
 	} 
-
-	\Bridge\Menu::add('bridge_option', [
-		'segment' => 'admin',
+	\Bridge\Menu::admin('bridge_option', [
+		'id' => 'bridge_option',
 		'title' => 'Options',
 		'description' => '',
 		'icon' => ''
 	]);
+
+	\Bridge\Menu::item('bridge_option', [
+		'id'	=> 'general',
+		'title' => 'General',
+		'description' => '',
+		'icon' => '',
+		'route' => 'bridge_option'
+	]);
+	\Bridge\Menu::item('bridge_option', [
+		'id'	=> 'option_template',
+		'title' => 'Template',
+		'description' => '',
+		'icon' => '',
+		'route' => 'option_template'
+	]);
+
+});
+
+add_action('bridge_complete', function() {
+
 	
 });

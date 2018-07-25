@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbcc25e3fdd57c9f8da67dc9775e9705",
+    "content-hash": "70e6618b7be63800853779a4b8067d90",
     "packages": [
         {
             "name": "asm89/twig-cache-extension",
@@ -1355,6 +1355,51 @@
                 "templating"
             ],
             "time": "2017-07-04T13:19:31+00:00"
+        },
+        {
+            "name": "wpmetabox/meta-box",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpmetabox/meta-box.git",
+                "reference": "8f0653f66f3b58add3fc36cf7d101a94079e5881"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpmetabox/meta-box/zipball/8f0653f66f3b58add3fc36cf7d101a94079e5881",
+                "reference": "8f0653f66f3b58add3fc36cf7d101a94079e5881",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "meta-box.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Tran Ngoc Tuan Anh",
+                    "email": "anhtnt@elightup.com",
+                    "homepage": "https://deluxeblogtips.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A powerful, professional developer toolkit to create custom meta boxes and custom fields for WordPress websites.",
+            "homepage": "https://metabox.io",
+            "keywords": [
+                "custom-field",
+                "meta-box",
+                "select2",
+                "ui",
+                "wordpress",
+                "wordpress-plugin",
+                "wp-admin"
+            ],
+            "time": "2018-07-24T08:46:53+00:00"
         }
     ],
     "packages-dev": [
@@ -2696,7 +2741,8 @@
         "symfony/http-foundation": 20,
         "doctrine/annotations": 20,
         "symfony/property-info": 20,
-        "guzzlehttp/guzzle": 20
+        "guzzlehttp/guzzle": 20,
+        "wpmetabox/meta-box": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -5,14 +5,14 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-use Bridge\Model\PostType;
+use Bridge\Database\Model\PostType;
 /**
  * @Bridge\Annotation\Model(
  * name="news", 
  * virtual=true, 
  * virtualType="post_type",
- * repository = "Bridge\Repository\PostRepository",
- * persistent = "Bridge\Persistent\PostPersistent",
+ * repository = "Bridge\App\Repository\PostRepository",
+ * persistent = "Bridge\App\Persistent\PostPersistent",
  * meta = {
  * 		"label" = "News",
  *   	"description" = "",

@@ -4,7 +4,7 @@ namespace Bridge\App\Middleware;
 if (!defined('ABSPATH')) {
 	exit;
 }
-use Bridge\Middleware\Middleware;
+use Bridge\Http\Middleware\Middleware;
 
 /**
  * @Bridge\Annotation\Middleware(
