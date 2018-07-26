@@ -21,6 +21,11 @@ use Bridge\Database\Model\PostType;
  */
 class News extends PostType {
 
-	
+	/**
+	 * @Bridge\Annotation\Control(
+	 * type="text"
+	 * )
+	 * */
+	public $headline;
 
 }

@@ -16,7 +16,6 @@
 		"symfony/http-foundation": "^4.2@dev",
 		"doctrine/annotations": "1.7.x-dev",
 		"symfony/property-info": "^4.2@dev",
-		"google/apiclient": "^2.0",
 		"guzzlehttp/guzzle": "^6.3@dev",
 		"wpmetabox/meta-box": "dev-master"
 	},

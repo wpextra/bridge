@@ -40,12 +40,15 @@ class CommentRepository extends Repository {
 
 	public function getByPost($post, $args = ['per_page' => 10]) {
 
+
 		$query = self::buildQuery(array_merge([
-			'post_id' => $post->id
+			'post_id' => $post->ID
 		], $args));
 
 		if (!empty($query->comments) ) {
 			return new CommentCollection($query->comments, $this->model_class);
+		} else {
+			return [];
 		}
 	}
 
@@ -54,6 +57,5 @@ class CommentRepository extends Repository {
 		$bridge_query->query($args);
 		return $bridge_query;
 	}
-	
 }
 

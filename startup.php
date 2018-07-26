@@ -69,6 +69,9 @@ final class Startup {
 	public function initiated() {
 		new \Bridge\Kernel\Listener();
 		new \Bridge\Kernel\Registry();
+		new \Bridge\Kernel\UserMeta();
+		new \Bridge\Kernel\PostMeta();
+		new \Bridge\Kernel\TermMeta();
 	}
 	public function complete() {
 		do_action('bridge_complete');

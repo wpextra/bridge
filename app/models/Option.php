@@ -20,6 +20,7 @@ use Bridge\Database\Model\Model;
  */
 class Option extends Model {
 
-	
+		
+
 
 }
