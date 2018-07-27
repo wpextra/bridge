@@ -32,6 +32,29 @@ add_action('wp_enqueue_scripts', function() {
 		['bridge_vendor'],
 		BRIDGE_VERSION
 	);
+
+	wp_register_style(
+		'datatable',
+		BRIDGE_ASSET_URL . 'css/dataTables.min.css',
+		['bridge_vendor'],
+		BRIDGE_VERSION
+	);
+
+	wp_register_script(
+		'datatable',
+		BRIDGE_ASSET_URL . 'js/jquery.dataTables.min.js',
+		['bridge_vendor'],
+		BRIDGE_VERSION
+	);
+	wp_register_script(
+		'datatable_bootstrap',
+		BRIDGE_ASSET_URL . 'js/dataTables.bootstrap4.min.js',
+		['datatable'],
+		BRIDGE_VERSION
+	);
+
+
+
 	wp_enqueue_style( 'bridge_shared' );
 	wp_enqueue_script( 'bridge_shared' );
 	
@@ -74,6 +97,27 @@ add_action('admin_enqueue_scripts', function() {
 		['bridge_shared'],
 		BRIDGE_VERSION
 	);
+
+	wp_register_style(
+		'datatable',
+		BRIDGE_ASSET_URL . 'css/dataTables.min.css',
+		['bridge_vendor'],
+		BRIDGE_VERSION
+	);
+
+	wp_register_script(
+		'datatable',
+		BRIDGE_ASSET_URL . 'js/jquery.dataTables.min.js',
+		['bridge_vendor'],
+		BRIDGE_VERSION
+	);
+	wp_register_script(
+		'datatable_bootstrap',
+		BRIDGE_ASSET_URL . 'js/dataTables.bootstrap4.min.js',
+		['datatable'],
+		BRIDGE_VERSION
+	);
+	
 	wp_enqueue_style( 'bridge_admin' );
 	wp_enqueue_script( 'bridge_admin' );
 });

@@ -11,15 +11,16 @@ use Bridge\Database\Model\Model;
  * virtual=true, 
  * virtualType="user_meta",
  * repository = "Bridge\App\Repository\UserMetaRepository",
- * persistent = "Bridge\App\Persistent\UserMetaPersistent",
- * meta = {
- * 		"label" = "Comments",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
- * })
+ * persistent = "Bridge\App\Persistent\UserMetaPersistent")
  */
 class UserMeta extends Model {
 
-	
+	public $umeta_id;
+
+	public $user_id;
+
+	public $meta_key;
+
+	public $meta_value;
 
 }

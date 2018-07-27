@@ -9,17 +9,19 @@ use Bridge\Database\Model\Model;
  * @Bridge\Annotation\Model(
  * name="term_meta", 
  * virtual=true, 
- * virtualType="term_meta",
  * repository = "Bridge\App\Repository\TermMetaRepository",
- * persistent = "Bridge\App\Persistent\TermMetaPersistent",
- * meta = {
- * 		"label" = "Comments",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
- * })
+ * persistent = "Bridge\App\Persistent\TermMetaPersistent"
+ * )
  */
+
 class TermMeta extends Model {
 
-	
+	public $meta_id;
+
+	public $term_id;
+
+	public $meta_key;
+
+	public $meta_value;
 
 }

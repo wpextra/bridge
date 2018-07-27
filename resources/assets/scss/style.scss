@@ -29,17 +29,28 @@ img {
 	/*-------------------------------------------------------------------*/
 
 	/* === Core Styles === */
-
 	@import "reset";
 	@import "functions";
-	@import "sidebar";
-	@import "navbar";
 	@import "typography";
-	@import "misc";
-	@import "footer";
 	@import "utilities";
 	@import "demo";
 	@import "dashboard";
+	/*-------------------------------------------------------------------*/
+
+	/* === Layhouts === */
+
+	@import "layouts/main";
+	@import "layouts/admin";
+	@import "layouts/member";
+	@import "layouts/console";
+	@import "layouts/hello";
+	@import "layouts/auth";
+	@import "partials/header";
+	@import "partials/footer";
+	@import "partials/sidebar";
+	@import "partials/aside-left";
+	@import "partials/aside-right";
+
 	/*-------------------------------------------------------------------*/
 
 	/* === Components === */
@@ -60,7 +71,7 @@ img {
 	/*-------------------------------------------------------------------*/
 
 	/* === Landing screens === */
-
+	@import "landing-screens/hello";
 	@import "landing-screens/auth";
 	@import "landing-screens/error";
 } 

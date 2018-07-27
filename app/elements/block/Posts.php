@@ -15,10 +15,6 @@ use Bridge\Template\Element\Block;
  * templates={
  * 		"blocks/posts/list.twig" = "List"
  * },
- * api_routes= {
- * 		"html" = "api_response",
- *   	"data" = "api_response_data"
- * },
  * meta= {
  * 		"label" = "Posts",
  *   	"description" = "",
@@ -45,21 +41,36 @@ class Posts extends Block {
 
 	}
 
-
+	/**
+	 * Expose controller to API Resource
+	 * @Bridge\Annotation\ApiMethod(
+	 * name 	= "block_api",
+	 * path 	= "blocks/posts", 
+	 * methods 	= "GET",
+	 * params 	= {
+	 * })
+	 */
 	static public function api_response($request) {
 		return [];
 	}
+
+	/**
+	 * @Bridge\Annotation\ApiMethod(
+	 * name 	= "block_api",
+	 * path 	= "blocks/posts/data", 
+	 * methods 	= "GET",
+	 * params 	= {
+	 * })
+	 */
 	static public function api_response_data($request) {
 
 	}
 	
+
 	public function data($args = [], $context = []) {
 	
 		$context['posts'] = \Bridge\Query::model('post')->query('all', array($args))->results();
 		
 		return $context;
 	}
-
-	
-
 }

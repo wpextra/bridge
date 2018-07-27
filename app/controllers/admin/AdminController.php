@@ -9,13 +9,9 @@ use Bridge\Http\Controller\Controller;
 /**
  * @Bridge\Annotation\Route(
  * name="bridge_admin", 
- * path="admin/dashboard", 
- * middleware="admin",
- * args= {
- * 		"label" = "Posts",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
- * })
+ * path="admin", 
+ * middleware="admin"
+ * )
  */
 class AdminController extends Controller {
 

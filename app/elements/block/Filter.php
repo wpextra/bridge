@@ -14,7 +14,7 @@ use Bridge\Template\Element\Block;
  * @Bridge\Annotation\Element(
  * name="filter", 
  * type="block",
-  * template="blocks/filter/standard.twig",
+ * template="blocks/filter/standard.twig",
  * templates={
  * 		
  * },

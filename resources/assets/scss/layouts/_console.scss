@@ -1,0 +1,75 @@
+.page-console {
+	background: #fff;
+	.page-header {
+		background-color: #f1f1f1;
+		.navbar {
+			box-shadow : none;
+			background-color: #f1f1f1;
+		}
+	}
+	.page-panel {
+		background: #fff;
+		.main-panel {
+			padding: 1.9rem 0;
+		}
+		.sidebar {
+			width: 300px;
+			ul, li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+		}
+	}
+
+}
+
+
+
+.console-profile {
+	.profile-user {
+		display: flex;
+		padding: 10px;
+		background: rgba(181,214,217,.15);
+		color: #3eaaaf;
+		border-radius: 4px;
+		margin-bottom: 15px;
+		.avatar {
+			width: 42px;
+			height: 42px;
+			margin-right: 10px;
+		}
+		.info {
+			flex: 1;
+			.name {
+				margin: 0 0 4px 0;
+				font-size: 1.3rem;
+				line-height: 1;
+			}
+			.token {
+				font-size: 0.8rem;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.console-services {
+	.item {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		.thumbnail {
+			width: 100px;
+			height: 100px;
+		}
+		.text {
+			font-size: .9rem;
+			padding: 0 15px;
+			line-height: 1;
+			.text-graymb-2 {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}

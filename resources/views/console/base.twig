@@ -1,0 +1,73 @@
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js  ux-wrapper" {{ site.language_attributes }}> <!--<![endif]-->
+<head>
+	{% block head %}
+		<meta charset="{{ site.charset }}" />
+		<title>   
+			{% if site.title %}
+				{{ site.title }} - {{ site.name }}
+			{% else %}
+				{{ site.name }}
+			{% endif %}
+		</title>
+		<meta name="description" content="{{ site.description }}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="pingback" href="{{ site.pingback_url }}" />
+		{{function('wp_head')}}
+	{% endblock %}
+</head>
+<body class="{{body_class}}" data-template="base.twig">
+	<div class="page-panel page-console">
+		<div class="page-header"> 
+			<nav class="navbar navbar-default navbar-expand-lg  default-layout ">
+				<div class="container">
+					{{menu('console')}}
+					{% include 'partials/nav-user.twig' %}
+				</div> 
+			</nav>
+		</div> 
+		<div class="page-panel console-panel">
+			<div class="container">
+				<div class="main-panel"> 
+					<div class="column-panel">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="sidebar">
+									<aside class="console-profile">
+										<h4>My Account</h4>
+										<div class="profile-user">
+											<a href="/profile/ollatech"  class="avatar">  
+												<img src="https://avatars1.githubusercontent.com/u/35828095?v=4?v=3&amp;s=32" srcset="https://avatars1.githubusercontent.com/u/35828095?v=4?v=3&amp;s=32 1x, https://avatars1.githubusercontent.com/u/35828095?v=4?v=3&amp;s=64 2x" alt="ollatech avatar" class="real-avatar">
+											</a>
+											<div class="info">
+												<h3 class="name">ollatech</h3>
+												<p class="token">
+													API Token
+													<span class="chars">••••••••••••••••••••</span>
+												</p>
+											</div>
+										</div>
+										<div class="action">
+											<button class="btn btn-primary btn-sync">Sync account</button>
+											<button class="btn btn-primary btn-outline btn-upgrade ml-auto">Upgrade to Pro</button>
+										</div>
+									</aside>
+								</div>
+							</div>
+							<div class="col-md-8">
+								{% block content %}{% endblock %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

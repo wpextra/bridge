@@ -1,0 +1,55 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js  ux-wrapper" {{ site.language_attributes }}> <!--<![endif]-->
+<head>
+	{% block head %}
+		<meta charset="{{ site.charset }}" />
+		<title>   
+			{% if site.title %}
+				{{ site.title }} - {{ site.name }}
+			{% else %}
+				{{ site.name }}
+			{% endif %}
+		</title>
+		<meta name="description" content="{{ site.description }}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="pingback" href="{{ site.pingback_url }}" />
+		{{function('wp_head')}}
+	{% endblock %}
+</head>
+<body class="{{body_class}} left-on" data-template="base.twig">
+	<div class="page-wrapper">
+		<div class="page-panel">
+			<div class="aside-left">
+				<nav class="asider" id="aside_left-menu">
+					{{menu('member_aside', {'template' : 'blocks/menu/aside.twig'})}}
+				</nav>
+			</div>
+			<div class="main-panel">
+				<nav class="navbar navbar-default navbar-expand-lg  default-layout ">
+					{{menu('member_top')}}
+					{% include 'partials/nav-user.twig' %}
+				</nav>
+				<div class="content-panel">
+					{% block content %}
+
+					{% endblock %}
+				</div>
+				<div class="page-footer">
+					<footer class="footer">
+						<div class="container-fluid clearfix">
+							<span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+								<a href="http://www.wpextra.co" target="_blank">wpextra.co</a>. All rights reserved.
+							</span>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<ul class="navbar-nav navbar-nav-right  ml-auto">
+	<li class="nav-item dropdown d-none d-xl-inline-block">
+		<a class="nav-link dropdown-toggle" id="UserDropdown" href="{{user.profile_url}}" data-toggle="dropdown" aria-expanded="false">
+			{{user.avatar(32)}}
+		</a>
+		<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+			<a class="dropdown-item" href="{{user.native_admin_url}}">
+				Native Admin
+			</a>
+			<a class="dropdown-item" href="{{user.admin_url}}">
+				Admin
+			</a>
+			<a class="dropdown-item" href="{{user.admin_url}}">
+				Account
+			</a>
+			<a class="dropdown-item" href="{{user.profile_url}}">
+				Profile
+			</a>
+			<a class="dropdown-item"  href="{{user.logout_url}}">
+				Sign Out
+			</a>
+		</div>
+	</li>
+</ul>

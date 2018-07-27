@@ -5,6 +5,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 use Bridge\Database\Model\PostType;
+
 /**
  * @Bridge\Annotation\Model(
  * name="post", 
@@ -12,18 +13,18 @@ use Bridge\Database\Model\PostType;
  * virtualType="post",
  * repository = "Bridge\App\Repository\PostRepository",
  * persistent = "Bridge\App\Persistent\PostPersistent",
- * api_controller = "Bridge\App\Service\PostController",
- * api_routes = {
- * 		"collection" 	= "get_items",
- *   	"item" 			= "get_item",
- *      "create" 		= "create",
- *      "update" 		= "update",
- *      "delete" 		= "delete",
- * },
- * meta = {
- * 		"label" = "Posts",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
+ * meta 		= {
+ * 		"title"  = "Posts"
+ * })
+ * @Bridge\Annotation\ApiModel(
+ * url_base		= "posts", 
+ * controller 	= "Bridge\App\Service\PostController",
+ * operations 	= {
+ * 		"collection"  = "GET",
+ *   	"item" 		  = "GET",
+ *   	"update" 	  = "PUT",
+ *   	"create" 	  = "CREATE",
+ *   	"delete" 	  = "DELETE"
  * })
  */
 class Post extends PostType {

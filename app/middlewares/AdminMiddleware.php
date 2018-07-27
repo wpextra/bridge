@@ -11,16 +11,15 @@ use Bridge\Http\Middleware\Middleware;
  * name="admin"
  * )
  */
+
 class AdminMiddleware extends Middleware {
 
 	
 	public function authorize() {
 		if(!$this->user()) {
-			if(defined( 'BRIDGE_SENTINEL_INSTALLED')) {
-				wp_redirect(home_url('/auth/login'));
-			} else {
-				wp_redirect(home_url('/wp-login.php'));
-			}
+			
+			wp_redirect(home_url('/auth/signin'));
+			
 		}
 		return true;
 		

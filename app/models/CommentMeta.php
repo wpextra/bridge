@@ -9,16 +9,19 @@ use Bridge\Database\Model\Model;
  * @Bridge\Annotation\Model(
  * name="comment_meta", 
  * virtual=true, 
- * virtualType="comment_meta",
  * repository = "Bridge\App\Repository\CommentMetaRepository",
- * persistent = "Bridge\App\Persistent\CommentMetaPersistent",
- * meta = {
- * 		"label" = "Comments",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
- * })
+ * persistent = "Bridge\App\Persistent\CommentMetaPersistent"
+ * )
  */
 class CommentMeta extends Model {
+
+	public $comment_id;
+
+	public $post_id;
+
+	public $meta_key;
+
+	public $meta_value;
 
 	
 

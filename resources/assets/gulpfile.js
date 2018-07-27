@@ -18,28 +18,28 @@ var config = gulp.config;
 
 
 gulp.task('app', ['js-dev', 'sass-dev'], function() {
-  gulp.watch(config.source + 'scss/**/**/*.scss', ['sass-dev']);
-  gulp.watch(config.source + 'js/**/*.js', ['js-dev']);
+	gulp.watch(config.source + 'scss/**/**/*.scss', ['sass-dev']);
+	gulp.watch(config.source + 'js/**/*.js', ['js-dev']);
 });
 
 
 
 
 gulp.task('sass-dev', [], function() {
-  return gulp.src(config.app.css)
-  .pipe(sass())
-  .pipe(gulp.dest(config.target + 'css'))
-  .pipe(cssmin())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest(config.target + 'css'));
+	return gulp.src(config.app.css)
+	.pipe(sass())
+	.pipe(gulp.dest(config.target + 'css'))
+	.pipe(cssmin())
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest(config.target + 'css'));
 });
 
 
 gulp.task('js-dev', [], function() {
-  return gulp.src(config.app.js)
-  .pipe(gulp.dest(config.target + 'js'))
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest(config.target + 'js'));
+	return gulp.src(config.app.js)
+	.pipe(gulp.dest(config.target + 'js'))
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest(config.target + 'js'));
 });
 
 
@@ -47,21 +47,27 @@ gulp.task('js-dev', [], function() {
 gulp.task('default', ['app']); 
 
 gulp.task('vendor', [], function() {
+ 
+	gulp.src(config.js)
+	.pipe(concat('vendor.js'))
+	.pipe(gulp.dest(config.target + 'js/'))
+	.pipe(rename({suffix: '.min'}))
+	.pipe(gulp.dest(config.target + 'js'));
 
-  gulp.src(config.js)
-  .pipe(concat('vendor.js'))
-  .pipe(gulp.dest(config.target + 'js/'))
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest(config.target + 'js'));
-  
-  gulp.src(config.css)
-  .pipe(concat('vendor.css'))
-  .pipe(gulp.dest(config.target + 'css/'));
+	gulp.src(config.css)
+	.pipe(concat('vendor.css'))
+	.pipe(gulp.dest(config.target + 'css/'));
 
-  gulp.src(config.source + 'img/**/*')
- .pipe(gulp.dest(config.target + 'img'));
+	gulp.src(config.source + 'css/**/*')
+	.pipe(gulp.dest(config.target + 'css'));
 
- gulp.src(config.fonts)
- .pipe(gulp.dest(config.target + 'fonts/'));
+	gulp.src(config.source + 'imgages/**/*')
+	.pipe(gulp.dest(config.target + 'imgages'));
+
+	gulp.src(config.source + 'img/**/*')
+	.pipe(gulp.dest(config.target + 'img'));
+
+	gulp.src(config.fonts)
+	.pipe(gulp.dest(config.target + 'fonts/'));
 
 });

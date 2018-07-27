@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Autoloader {
 
 	private static $namespace = 'Bridge';
-	private static $namespaces = ['Bridge'];
+	private static $namespaces = ['Bridge', 'ORMB'];
 	private static $classes_map = [];
 	private static $classes_aliases = [];
 

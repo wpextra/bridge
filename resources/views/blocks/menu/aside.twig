@@ -1,0 +1,29 @@
+<ul class="aside-nav in">
+	<li class="aside-nav-title aside-nav-item">Navigation</li>
+	{% for item in menu %} 
+		{% if item.childrens|length > 1 %}
+			<li class="aside-nav-item {{item.class}}">
+				<a href="javascript: void(0);" class="aside-nav-link">
+					{% if item.icon %} <i class="{{item.icon}}"></i> {% endif %}
+					<span> {{item.title}} </span>
+					<span class="menu-arrow"></span>
+				</a>
+				<ul class="aside-nav-second-level collapse" aria-expanded="false">
+					{% for child in item.childrens %} 
+						<li>
+							<a href="{{child.url}}"><span>{{child.title}}</span></a>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
+		
+		{% else %}
+			<li class="aside-nav-item   {{item.class}}">
+				<a href="{{item.url}}" class="aside-nav-link">
+					{% if item.icon %} <i class="{{item.icon}}"></i> {% endif %}
+					<span> {{item.title}} </span>
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

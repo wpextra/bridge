@@ -15,11 +15,7 @@ class AuthMiddleware extends Middleware {
 
 	public function authorize() {
 		if($this->user()) {
-			if(defined( 'BRIDGE_MEMBER_INSTALLED')) {
-				wp_redirect(home_url('/account'));
-			} else {
-				wp_redirect(home_url('/wp-admin'));
-			}
+				wp_redirect(home_url('/hello'));
 		}
 		return true;
 		

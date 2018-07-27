@@ -1,146 +1,17 @@
 <?php
+/***********************************************
+* Extends Bridge application here
+* *********************************************/
+require_once dirname( __FILE__ ) . '/config.php';
+require_once dirname( __FILE__ ) . '/menu.php';
+require_once dirname( __FILE__ ) . '/filters.php';
+require_once dirname( __FILE__ ) . '/functions.php';
+require_once dirname( __FILE__ ) . '/helpers.php';
+require_once dirname( __FILE__ ) . '/templates.php';
+require_once dirname( __FILE__ ) . '/fields.php';
+require_once dirname( __FILE__ ) . '/apis.php';
+require_once dirname( __FILE__ ) . '/routers.php';
 
 
-add_action('bridge_started', function() {
-
-	\Bridge\Twig::dir(BRIDGE_PATH.'resources/views', 0);
-	\Bridge\Twig::dir(get_template_directory().'/resources/views', 999);
-	\Bridge\Twig::dir(get_stylesheet_directory().'/resources/views', 1000);
-
-	\Bridge\Config::dir('api', BRIDGE_PATH.'app/apis');
-	\Bridge\Config::dir('controller', BRIDGE_PATH.'app/controllers');
-	\Bridge\Config::dir('model', BRIDGE_PATH.'app/models');
-	\Bridge\Config::dir('header', BRIDGE_PATH.'app/elements/header');
-	\Bridge\Config::dir('footer', BRIDGE_PATH.'app/elements/footer');
-	\Bridge\Config::dir('block', BRIDGE_PATH.'app/elements/block');
-	\Bridge\Config::dir('popup', BRIDGE_PATH.'app/elements/popup');
-	\Bridge\Config::dir('middleware', BRIDGE_PATH.'app/middlewares');
-	\Bridge\Config::dir('repository', BRIDGE_PATH.'app/repository');
-	\Bridge\Config::dir('persistent', BRIDGE_PATH.'app/persistent');
-	\Bridge\Config::dir('control', BRIDGE_PATH.'app/controls');
-	\Bridge\Config::dir('container', BRIDGE_PATH.'app/repository');
-	\Bridge\Config::dir('container', BRIDGE_PATH.'app/persistent');
-	\Bridge\Config::dir('container', BRIDGE_PATH.'app/services');
-
-	\Bridge\Menu::wp('main_menu', [
-		'title' => 'Main Menu'
-	]);
-	
-	
-	\Bridge\Menu::admin('bridge_admin', [
-		'id' => 'bridge_admin',
-		'title' => 'Bridge',
-		'description' => '',
-		'icon' => ''
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'id'	=> 'home',
-		'title' => 'Home',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_admin'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'id'	=> 'analytic',
-		'title' => 'Analytics',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_installed'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'id'	=> 'service',
-		'title' => 'Service',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_installed'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'id'	=> 'howto',
-		'title' => 'How to',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_installed'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'id'	=> 'my_app',
-		'title' => 'My Apps',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_installed'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'id'	=> 'app',
-		'title' => 'Apps',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'parent' => 'app',
-		'id'	=> 'plugin',
-		'title' => 'Plugins',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_plugin'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'parent' => 'app',
-		'id'	=> 'theme',
-		'title' => 'Themes',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_theme'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'parent' => 'app',
-		'id'	=> 'widget',
-		'title' => 'Widgets',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_widget'
-	]);
-	\Bridge\Menu::item('bridge_admin', [
-		'parent' => 'app',
-		'id'	=> 'integration',
-		'title' => 'Integrations',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_app_integrations'
-	]);
-	if(!defined('BRIDGE_KOMODO_INSTALLED')) {
-		\Bridge\Menu::item('bridge_admin', [
-			'id'	=> 'pro',
-			'title' => 'Pro Version',
-			'description' => '',
-			'icon' => '',
-			'route' => 'pro_version'
-		]);
-	} 
-	\Bridge\Menu::admin('bridge_option', [
-		'id' => 'bridge_option',
-		'title' => 'Options',
-		'description' => '',
-		'icon' => ''
-	]);
-
-	\Bridge\Menu::item('bridge_option', [
-		'id'	=> 'general',
-		'title' => 'General',
-		'description' => '',
-		'icon' => '',
-		'route' => 'bridge_option'
-	]);
-	\Bridge\Menu::item('bridge_option', [
-		'id'	=> 'option_template',
-		'title' => 'Template',
-		'description' => '',
-		'icon' => '',
-		'route' => 'option_template'
-	]);
-
-});
-
-add_action('bridge_complete', function() {
-
-	
-});
+/*************** END OF YOUR CODE *************/
+/****** Keep your code clean & organized ******/

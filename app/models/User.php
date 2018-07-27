@@ -11,19 +11,18 @@ use Bridge\Database\Model\Model;
  * virtual=true, 
  * virtualType="user",
  * repository = "Bridge\App\Repository\UserRepository",
- * persistent = "Bridge\App\Persistent\UserPersistent",
- * api_controller = "Bridge\App\Service\UserController",
- * api_routes = {
- * 		"collection" 	= "get_items",
- *   	"item" 			= "get_item",
- *      "create" 		= "create",
- *      "update" 		= "update",
- *      "delete" 		= "delete",
- * },
- * meta = {
- * 		"label" = "Users",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
+ * persistent = "Bridge\App\Persistent\UserPersistent"
+ * )
+
+ * @Bridge\Annotation\ApiModel(
+ * url_base		= "users", 
+ * controller 	= "Bridge\App\Service\UserController",
+ * operations 	= {
+ * 		"collection"  = "GET",
+ *   	"item" 		  = "GET",
+ *   	"update" 	  = "PUT",
+ *   	"create" 	  = "CREATE",
+ *   	"delete" 	  = "DELETE"
  * })
  */
 class User extends Model {

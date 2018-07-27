@@ -1,0 +1,226 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js  ux-wrapper" {{ site.language_attributes }}> <!--<![endif]-->
+<head>
+	{% block head %}
+		<meta charset="{{ site.charset }}" />
+		<title>   
+			{% if site.title %}
+				{{ site.title }} - {{ site.name }}
+			{% else %}
+				{{ site.name }}
+			{% endif %} 
+		</title>
+		<meta name="description" content="{{ site.description }}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="pingback" href="{{ site.pingback_url }}" />
+		{{function('wp_head')}}
+	{% endblock %}
+</head>
+<body class="{{body_class}} left-on folded" data-template="base.twig">
+	<div class="page-panel">
+		
+
+		<div class="aside-left">
+			<nav class="asider pushed centered">
+				{{menu('hello', { 'template' : 'blocks/menu/aside.twig'})}}
+			</nav>
+		</div>
+		<div class="page-panel">
+			<div class="main-panel">
+				<div class="hello-header">
+					<nav class="navbar navbar-default navbar-expand-lg">
+						{% include 'partials/nav-user.twig' %}
+					</nav>
+				</div>
+				
+				<div class="content-panel">
+					<div class="hello-apps">
+						<div class="app-container">
+							<div class="apps">
+								<div class="app-items">
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="dropdown float-right">
+												<a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+													<i class="mdi mdi-dots-vertical"></i>
+												</a>
+												<div class="dropdown-menu dropdown-menu-right">
+													<!-- item-->
+													<a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+													<!-- item-->
+													<a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+													<!-- item-->
+													<a href="javascript:void(0);" class="dropdown-item">Profit</a>
+													<!-- item-->
+													<a href="javascript:void(0);" class="dropdown-item">Action</a>
+												</div>
+											</div>
+											<h4 class="header-title">Projections Vs Actuals</h4>
+
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-cube text-danger icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Total Revenue</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">$65,650</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth
+											</p>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-receipt text-warning icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Orders</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">3455</h3>
+													</div>
+												</div>
+											</div>
+											<a href="#;" class="btn btn-outline-light btn-sm mb-1">More
+												<i class="mdi mdi-arrow-right ml-1"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-poll-box text-success icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Sales</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">5693</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales
+											</p>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-account-location text-info icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Employees</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">246</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales
+											</p>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-cube text-danger icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Total Revenue</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">$65,650</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth
+											</p>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-receipt text-warning icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Orders</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">3455</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Product-wise sales
+											</p>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-poll-box text-success icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Sales</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">5693</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales
+											</p>
+										</div>
+									</div>
+
+									<div class="card card-app-widget">
+										<div class="card-body">
+											<div class="clearfix">
+												<div class="float-left">
+													<i class="mdi mdi-account-location text-info icon-lg"></i>
+												</div>
+												<div class="float-right">
+													<p class="mb-0 text-right">Employees</p>
+													<div class="fluid-container">
+														<h3 class="font-weight-medium text-right mb-0">246</h3>
+													</div>
+												</div>
+											</div>
+											<p class="text-muted mt-3 mb-0">
+												<i class="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

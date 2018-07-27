@@ -9,21 +9,20 @@ use Bridge\Database\Model\Model;
  * @Bridge\Annotation\Model(
  * name="comment", 
  * virtual=true, 
- * virtualType="comment",
  * repository = "Bridge\App\Repository\CommentRepository",
  * persistent = "Bridge\App\Persistent\CommentPersistent",
- * api_controller = "Bridge\App\Service\CommentController",
- * api_routes = {
- * 		"collection" 	= "get_items",
- *   	"item" 			= "get_item",
- *      "create" 		= "create",
- *      "update" 		= "update",
- *      "delete" 		= "delete",
- * },
- * meta = {
- * 		"label" = "Comments",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
+ * )
+
+
+ * @Bridge\Annotation\ApiModel(
+ * url_base		= "comments", 
+ * controller 	= "Bridge\App\Service\CommentController",
+ * operations 	= {
+ * 		"collection"  = "GET",
+ *   	"item" 		  = "GET",
+ *   	"update" 	  = "PUT",
+ *   	"create" 	  = "CREATE",
+ *   	"delete" 	  = "DELETE"
  * })
  */
 class Comment extends Model {
@@ -84,15 +83,16 @@ class Comment extends Model {
      * @var integer
      */
     public $comment_parent;
+
     /**
      * @var integer
      */
     public $user_id;
+
     /**
      * @var array
      */
     public $meta = array();
 
 	
-
 }

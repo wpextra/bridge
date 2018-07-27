@@ -1,0 +1,44 @@
+
+.hello-header {
+	position: relative;
+	.navbar {
+		position: absolute;
+		width: 100%;
+	}
+}
+.hello-apps {
+	height: 100vh;
+	.app-container {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+
+		.apps {
+			max-width: 1200px;
+			padding: 40px;
+			.card-app-widget {
+				margin: 10px;
+				border: none; 
+				width: 30%;
+				background-color: #fff;
+				background-clip: border-box;
+				border-radius: 0;
+				.card-body {
+					padding: 1.5rem;
+				}
+				.header-title {
+					font-size: 0.9rem;
+				}
+				.dropdown {
+					.dropdown-toggle {
+						&:after {
+							display: none;
+						}
+					}
+
+				}
+			}
+		}
+
+	}
+}

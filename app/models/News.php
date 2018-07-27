@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) {
 }
 
 use Bridge\Database\Model\PostType;
+
 /**
  * @Bridge\Annotation\Model(
  * name="news", 
@@ -13,19 +14,20 @@ use Bridge\Database\Model\PostType;
  * virtualType="post_type",
  * repository = "Bridge\App\Repository\PostRepository",
  * persistent = "Bridge\App\Persistent\PostPersistent",
- * meta = {
- * 		"label" = "News",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
+ * meta 		= {
+ * 		"title"  = "News"
  * })
  */
 class News extends PostType {
 
 	/**
-	 * @Bridge\Annotation\Control(
+	 * @Bridge\Annotation\Field(
 	 * type="text"
 	 * )
 	 * */
 	public $headline;
+
+
+	
 
 }

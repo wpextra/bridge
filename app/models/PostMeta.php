@@ -11,14 +11,17 @@ use Bridge\Database\Model\Model;
  * virtual=true, 
  * virtualType="post_meta",
  * repository = "Bridge\App\Repository\PostMetaRepository",
- * persistent = "Bridge\App\Persistent\PostMetaPersistent",
- * meta = {
- * 		"label" = "Comments",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
- * })
+ * persistent = "Bridge\App\Persistent\PostMetaPersistent")
  */
 class PostMeta extends Model {
+
+	public $meta_id;
+
+	public $post_id;
+
+	public $meta_key;
+
+	public $meta_value;
 
 	
 

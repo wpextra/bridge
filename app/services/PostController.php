@@ -19,7 +19,7 @@ if ( !defined('ABSPATH') ) {
 
 class PostController {
 	
-	public static function get_items($request) {
+	public static function collection($request) {
 		$args = $request->get_params();
 		$subquery = [];
 		$repo = \Bridge\Query::model('post')->get($args)->results();
@@ -28,7 +28,7 @@ class PostController {
 			'pagination' => $repo->pagination
 		];
 	}
-	static public  function get_item($request) {
+	static public  function item($request) {
 		$args = $request->get_params();
 		$subquery = [];
 		$repo = \Bridge\Query::model('post')->find($args)->results();

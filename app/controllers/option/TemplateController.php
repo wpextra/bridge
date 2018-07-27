@@ -10,12 +10,8 @@ use Bridge\Http\Controller\OptionController as Controller;
  * @Bridge\Annotation\Route(
  * name="option_template", 
  * path="admin/option_template", 
- * middleware="admin",
- * args= {
- * 		"label" = "Template",
- *   	"description" = "",
- *    	"icon"	= "fa fa-home"
- * })
+ * middleware="admin"
+ * )
  */
 
 class TemplateController extends Controller {

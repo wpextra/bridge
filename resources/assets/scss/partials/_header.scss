@@ -1,0 +1,52 @@
+/* Navbar */
+
+.navbar {
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				margin-right: 10px;
+				i { 
+					margin-right: 3px;
+				}
+			}
+		}
+	} 
+	&.default-layout {
+		font-family: $type-2;
+		background-color: #fff;
+		-webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+		box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+		padding: 0 1.3rem;
+		.navbar-nav {
+			.nav-item {
+				.nav-link {
+					font-size: 0.93423rem;
+					i {
+						margin-right: 3px;
+					}
+				}
+			}
+		}
+	}
+}
+ 
+@media (max-width:991px) {
+	.navbar {
+		&.default-layout {
+			flex-direction: row;
+			.navbar-brand-wrapper {
+				width: 75px;
+				.brand-logo {
+					display: none;
+				}
+				.brand-logo-mini {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.navbar-collapse {
+		display: flex;
+		margin-top: 0.5rem;
+	}
+}
